@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "description": "Brush teeth and floss",
+        "status": "todo",
+        "createdAt": "2026-01-02T23:39:00.691096",
+        "updatedAt": "2026-01-02T23:39:00.691096"
+    },
+    {
+        "id": 2,
+        "description": "Read 'The Idiot'",
+        "status": "todo",
+        "createdAt": "2026-01-02T23:39:31.141352",
+        "updatedAt": "2026-01-02T23:39:31.141352"
+    }
+]

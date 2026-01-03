@@ -49,27 +49,51 @@ def main():
 
 
 
+
+
+
+
+
+
+
+#open tasks.json if it exists and return it, otherwise create tasks.json and return it
+def load_tasks():
+    if not os.path.exists(TASK_FILE):
+        return []
+    try:
+        with open(TASK_FILE, 'r') as file: #this opens the json file for reading
+            return json.load(file)
+    except (json.JSONDecodeError, IOError):
+        return []
+
+
+def save_tasks(tasks):
+    try:
+        with open(TASK_FILE, 'w') as file:
+            json.dump(tasks, file, indent=4)
+    except IOError as e:
+        print(f"Error saving tasks: {e}")
+
+
+
+
+
 def add_task(description):
+    tasks = load_tasks()
+
+    new_id = 1 if not tasks else max(t['id'] for t in tasks) + 1
+
     new_task = {
-        'id': 1,
+        'id': new_id,
         'description': description,
         'status': 'todo',
         'createdAt': datetime.datetime.now().isoformat(),
         'updatedAt': datetime.datetime.now().isoformat()
     }
 
-
-    if os.path.exists(TASK_FILE):
-        with open(TASK_FILE, 'r') as file:
-            data = json.load(file)
-
-            data.append(new_task)
-    else:
-        data = [new_task]
-
-    with open(description, 'w') as file:
-        json.dump(data, file, indent=4)
-        print(f"Successfully added data to {description}")
+    tasks.append(new_task)
+    save_tasks(tasks)
+    print(f"Task added successfully (ID: {new_id})")
                      
 
 
