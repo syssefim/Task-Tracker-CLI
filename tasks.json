@@ -1,16 +1,23 @@
 [
     {
         "id": 1,
-        "description": "Brush teeth and floss",
-        "status": "todo",
-        "createdAt": "2026-01-02T23:39:00.691096",
-        "updatedAt": "2026-01-02T23:39:00.691096"
+        "description": "Finish Task Tracker CLI project",
+        "status": "inprogress",
+        "createdAt": "2026-01-03T15:22:51.854101",
+        "updatedAt": "2026-01-03T15:24:27.859235"
     },
     {
         "id": 2,
-        "description": "Read 'The Idiot'",
+        "description": "Apply to at least 10 jobs before the end of the week",
         "status": "todo",
-        "createdAt": "2026-01-02T23:39:31.141352",
-        "updatedAt": "2026-01-02T23:39:31.141352"
+        "createdAt": "2026-01-03T15:25:07.662688",
+        "updatedAt": "2026-01-03T15:25:07.662688"
+    },
+    {
+        "id": 3,
+        "description": "Work on resume project",
+        "status": "inprogress",
+        "createdAt": "2026-01-03T15:26:29.696845",
+        "updatedAt": "2026-01-03T15:26:46.496843"
     }
 ]
