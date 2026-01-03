@@ -1,4 +1,4 @@
-# This is one of the beginner projects from the backend developer road from the website roadmap.sh. 
+# This is one of the beginner projects from the backend developer roadmap from the website roadmap.sh. 
 
 
 
